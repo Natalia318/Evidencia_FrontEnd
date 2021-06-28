@@ -1,0 +1,27 @@
+.caja{
+    background-color: rgb(185, 89, 197);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4,155px);
+    padding: 5px;
+    width: 620px;
+
+}
+
+.celda{
+    height: 210px;
+    background-color: white;
+    border: 2px solid rgb(150, 19, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.img{
+    width:145px;
+}
+.tamanoPic{
+font: 1em sans-serif;
+}
