@@ -1,0 +1,88 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.estiloBody{
+	background-color: 00000;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*-------------------------------------------*/
+
+
+.titulo{
+	font-family: Edwardian Script ITC;
+	font-weight: bold;
+	font-size: 45px;
+}
+
+/*-----Estilos Header-----*/
+
+.estiloHeader{
+	background-color: #AEF7F6;
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px 10px 20px;
+	align-items: center;
+}
+
+.estiloNav{
+	margin:  20px 500px 20px 20px;
+}
+
+/*-----Estilos del Footer-----*/
+
+.estiloFooter{
+	background-color: #AEF7F6;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedorFooter{
+	display: flex;
+	justify-content: center;
+	margin: 32px;
+}
+
+.icono{
+	height: 80px;
+}
+
+/*-----Estilo Main-----*/
+
+.estiloMain{
+	background-color: #BFAEF7;
+	width: 90%;
+	margin: 20px;
+}
+.imagenG{
+	height: 350px;
+	width: 550px;
+}
+.botones{
+	width: 700px;
+	height: 80px;
+	text-align: center;
+	margin-left: -18%;
+
+
+}
+.iconos{
+	width: 500px;
+	margin-right: 5%;
+	text-align: center;
+}
+.botonesiconos{
+	width: 700px;
+	height: 155px;
+	text-align: center;
+
+}

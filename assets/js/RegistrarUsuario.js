@@ -7,14 +7,16 @@ let lista = []
 
 formularioRegistro.addEventListener('submit', (e) => {
     e.preventDefault();
-    const usuarioIn = document.getElementById("usuarioIn");
+    
     const nombreIn = document.getElementById("nombreIn");
     const correoIn = document.getElementById("correoIn");
+    const claveIn = document.getElementById("claveIn");
 
     const nuevoUsuario = {
-      usu: usuarioIn.value,
+      
       nom: nombreIn.value,
       cor: correoIn.value,
+      cla: claveIn.value,
     }
 
    guardarUsuario(nuevoUsuario)
@@ -43,7 +45,6 @@ const guardarUsuario = (usuario) => {
     
    
 }
-
 
 const comprobarUsuario = (correo, arreglo) => {
     let existe = false
