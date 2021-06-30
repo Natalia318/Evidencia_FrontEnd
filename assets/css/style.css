@@ -15,14 +15,17 @@
  
 }
 .titulo{
+    
     font-family: 'Dela Gothic One', cursive;;
-	
-	font-size: 80px;
+	border: #AEF7F6;
+	font-size: 70px;
+    width: 500px;
     color: rgb(0, 0, 0);
-    padding-left: 150px; ;
+    padding-left: 150px; 
     
     
 }.Datos{
+    
     padding: 10px;
     font-size: 30px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -30,20 +33,24 @@
 }
 
 .formulario{
+    
     justify-content: center;
     align-items: center;
 }
 
 .form-control{
+    
     padding: 5px;
     width: 400px;
     border-radius: 5px;
     border-color: blueviolet;
 }
 
+    
+
 
 .btnRegistrarse{
-    
+    background-color: blueviolet;
     cursor: pointer;
 	background-color: #AEF7F6;
 	padding: 10px;
@@ -55,8 +62,10 @@
 }
 .sesion{
     margin-top: 30px;
+    
 }
 .link{
+    
     font-style: italic;
     margin-left: 160px;
 }

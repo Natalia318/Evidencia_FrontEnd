@@ -1,11 +1,11 @@
 console.log ("*** Registrar Usuasrio")
 
 
-const formularioRegistro = document.getElementById("formularioRegistro")
+const formularioInicio = document.getElementById("formularioRegistro")
 let lista = []
 
 
-formularioRegistro.addEventListener('submit', (e) => {
+formularioInicio.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const nombreIn = document.getElementById("nombreIn");

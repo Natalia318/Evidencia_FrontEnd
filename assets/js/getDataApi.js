@@ -1,14 +1,13 @@
 console.log("Juego Minions");
-//const url ="https://pokeapi.co/api/v2/pokemon";
 
-/*Variables*/
+/*1. Arreglos*/
 let iconos = []
 let selecciones = []
 
 generarTablero()
-/*Funcion para cargar los iconos*/
+/*2.Funcion para cargar los iconos*/
 function cargarIconos(){
-    /*Cargar imagenes - Tamaño*/
+    /*3.Cargar imagenes - Tamaño*/
 	iconos = [
 	`<img src="https://cdn.icon-icons.com/icons2/458/PNG/128/Edith-despicable-me-2-icon_43744.png" width="80%">`,
 	`<img src="https://cdn.icon-icons.com/icons2/458/PNG/128/Dancing-minion-icon_43757.png" width="80%">`,
@@ -25,16 +24,16 @@ function cargarIconos(){
 	]
 }
 
-/*Funcion para generar el tablero*/
+/*2.Funcion para generar el tablero*/
 function generarTablero() {
-    /*Traemos la funcion de cargar los iconos*/
+    /*3.Traemos la funcion de cargar los iconos*/
             cargarIconos()
             selecciones = []
-            /*Obtener el elemento representativo del html*/
+            /*4.Obtener el elemento representativo del html*/
             let tablero = document.getElementById("tablero")
-            /*Declarar un arreglo para las targetas - Desordenarlas*/
+            /*5.Declarar un arreglo para las targetas - Desordenarlas*/
             let tarjetas = []
-            /*6x4 = 24 elementos*/
+            /* 6x4 = 24 elementos*/
             /* 0 a 23 = tiene 24 iteraciones*/
             for (let i = 0; i < 24; i++) {
                 /*Pasar el indice (i) de cada tarjeta*/
@@ -51,30 +50,30 @@ function generarTablero() {
                     </div>
                 </div>        
                 `)
-                //Mostrar 2 De La Misma Figura
+                //6.Mostrar 2 De La Misma Figura
                 /*(0) es la posicion, la primera*/
                 /*(1) la cantidad de elementos que se van a ingresar a partir de la posicion*/
                 if (i % 2 == 1) {
                     iconos.splice(0, 1)
                 }
             }
-            //Cartas De Forma Aleatoria En El tablero
+            //7.Cartas De Forma Aleatoria En El tablero
             tarjetas.sort(() => Math.random() - 0.5)
             tablero.innerHTML = tarjetas.join(" ")
         }
 
         function seleccionarTarjeta(i) {
-            /*Seleccionar tarjeta con el indice (i) que es la iteracion*/
+            /*8.Seleccionar tarjeta con el indice (i) que es la iteracion*/
             let tarjeta = document.getElementById("tarjeta" + i)
-            /*Si su transformacion es direrente a 180 - Rotar la tarjeta*/
+            /*9.Si su transformacion es direrente a 180 - Rotar la tarjeta*/
             if (tarjeta.style.transform != "rotateY(180deg)") {
                 tarjeta.style.transform = "rotateY(180deg)"
-                /*Conocer el indice de la targeta seleccionada*/
+                /*10.Conocer el indice de la targeta seleccionada*/
                 selecciones.push(i)
             }
-            /*Si la cantidad de elementos seleccionados son dos*/
+            /*10.Si la cantidad de elementos seleccionados son dos*/
             if (selecciones.length == 2) {
-                /*deseleccionar los elentos*/
+                /*deseleccionar los elementos*/
                 deseleccionar(selecciones)
                 /*Arreglo vacio*/
                 selecciones = []
@@ -82,19 +81,19 @@ function generarTablero() {
         }
 
         function deseleccionar(selecciones) {
-            /*Tener efecto despues - demorarse 1 seg*/
+            /*11.Tener efecto despues - demorarse 1 seg*/
             setTimeout(() => {
                 /*Obtener las tarjetas por medio del indice*/
                 let trasera1 = document.getElementById("trasera" + selecciones[0])
                 let trasera2 = document.getElementById("trasera" + selecciones[1])
-                /*Si la cara trasera 1 y 2 son diferentes se voltean a 0 grados*/
+                /*12.Si la cara trasera 1 y 2 son diferentes se voltean a 0 grados*/
                 if (trasera1.innerHTML != trasera2.innerHTML) {
                     let tarjeta1 = document.getElementById("tarjeta" + selecciones[0])
                     let tarjeta2 = document.getElementById("tarjeta" + selecciones[1])
                     tarjeta1.style.transform = "rotateY(0deg)"
                     tarjeta2.style.transform = "rotateY(0deg)"
                 }else{
-                    /*Si si coinciden, cambiar el color de las tarjetas*/
+                    /*13Si si coinciden, cambiar el color de las tarjetas*/
                     trasera1.style.background = "plum"
                     trasera2.style.background = "plum"
                 }
